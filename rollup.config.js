@@ -1,5 +1,5 @@
- var nodeResolve = require("rollup-plugin-node-resolve"),
-     uglify = require("rollup-plugin-uglify");
+const nodeResolve = require("rollup-plugin-node-resolve"),
+      uglify = require("rollup-plugin-uglify");
 
 export default {
   entry: "src/index.js",
@@ -10,7 +10,7 @@ export default {
 
   // d3 relies on the node-resolve plugin
   plugins: [
-    nodeResolve({ jsnext: true }),
+    nodeResolve(),
     uglify(),
   ]
 };
